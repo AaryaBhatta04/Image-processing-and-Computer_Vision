@@ -57,7 +57,7 @@ img = img/255
 blocks = im2col(img, (8, 8))  
 compressed, evecs, mean = kl_transform_blocks(blocks, 10) # using only top 10 evectors
 reconstructed_blocks = reconstruct_blocks(compressed, evecs, mean)
-# reconstructed_img = col2im(reconstructed_blocks, img.shape, (8, 8))
+# reconstructed_img = col2im(reconstructed_blocks, img.shape, (8, 8)) -> something going wrong here
 
 # cv.imshow("x",reconstructed_img)
 # cv.waitKey(0)
