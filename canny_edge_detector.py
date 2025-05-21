@@ -2,7 +2,7 @@ import numpy as np
 import cv2 as cv
 import matplotlib.pyplot as plt
 
-# 
+# note -> does_not work as well as opencv builtin function, and is slow also
 
 def Canny_detector(img, weak_threshold=None, strong_threshold=None):
     
