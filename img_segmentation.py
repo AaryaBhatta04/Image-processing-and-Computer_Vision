@@ -1,4 +1,4 @@
-import cv2
+import cv2 as cv
 import numpy as np
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 # I am using K-means clustering for this
 
 def kmeans_segmentation(image_path, k):
-    image = cv2.imread(image_path)
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    image = cv.imread(image_path)
+    image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
     height, width = image.shape[0], image.shape[1]
     pixel_values = image.reshape((-1, 3))
     pixel_values = np.float32(pixel_values)
@@ -22,6 +22,6 @@ def kmeans_segmentation(image_path, k):
 
     
 segmented_img, cluster_mask = kmeans_segmentation('buildings.jpg', 4)
-cv2.imshow('segmented image',segmented_img)
-cv2.waitKey(0)
+cv.imshow('segmented image',segmented_img)
+cv.waitKey(0)
     
