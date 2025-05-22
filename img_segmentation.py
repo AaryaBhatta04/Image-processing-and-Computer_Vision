@@ -1,8 +1,6 @@
 import cv2 as cv
 import numpy as np
 from sklearn.cluster import KMeans
-import matplotlib.pyplot as plt
-
 # I am using K-means clustering for this
 
 def kmeans_segmentation(image_path, k):
